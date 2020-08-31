@@ -140,7 +140,6 @@
             },
             getCategoriesCount() {
                 let data = this.sortedData ? this.sortedData : this.data
-
                 this.categories.forEach((category) => {
                     category.count = data.filter(item => item.theme === category.key).length
                 })
@@ -148,6 +147,11 @@
             },
             getOptionCount() {
                 let data = this.sortedData ? this.sortedData : this.data
+
+                if(this.activeCategory !== 'all'){
+                    data = this.sortedData.filter( item => item.theme === this.activeCategory )
+                }
+
                 let promoCount = data.filter(item => item.options.sale).length
                 let popularCount = data.filter(item => item.options.popular).length
                 let month = new Date().getMonth() - 1
@@ -267,7 +271,6 @@
             &__list.tile{
                 display: flex;
                 flex-wrap: wrap;
-                justify-content: space-between;
             }
         }
 
