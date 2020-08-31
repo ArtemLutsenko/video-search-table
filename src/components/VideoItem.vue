@@ -121,6 +121,10 @@
         flex-direction: row;
         height: 160px;
 
+        img{
+            width: 20%;
+        }
+
         .video-card__cover{
             height: 100%;
         }
@@ -141,6 +145,7 @@
         .card-btn{
             margin-right: 0;
             margin-left: auto;
+            width: 30%;
         }
     }
     @media (max-width: 1280px ) {
@@ -151,18 +156,39 @@
                     line-height: 24px;
                 }
             }
+            img{
+                width: 20%;
+            }
         }
 
 
     }
     @media (max-width: 1024px ) {
+        .video-card.card-list{
+            .video-card__info{
+                .video-card__title{
+                    font-size: 20px;
+                    line-height: 24px;
+                }
+            }
+            img{
+                width: 30%;
+            }
+
+            .card-btn{
+                width: 50%;
+                font-size: 16px;
+            }
+        }
+
+
         .video-card{
             width: 46%;
         }
         .video-card.card-list{
             .video-card__info{
                 .video-card__title{
-                    font-size: 18px;
+                    font-size: 16px;
                     line-height: 24px;
                 }
             }
@@ -189,6 +215,21 @@
             .video-card__btn-buy:after{
                 width: 44px;
                 height: 44px;
+            }
+        }
+        .video-card.card-list{
+            .card-btn{
+                font-size: 12px;
+                height: 34px;
+            }
+            .video-card__btn-watch:after{
+                width: 34px;
+                height: 34px;
+            }
+
+            .video-card__btn-buy:after{
+                width: 34px;
+                height: 34px;
             }
         }
 
@@ -242,8 +283,19 @@
                 height: 24px;
             }
         }
+        .video-card.card-list{
+            img{
+                width: 40%;
+            }
+
+            .card-btn{
+                width: 90%;
+                font-size: 10px;
+            }
+        }
 
     }
+
 
 
 </style>
