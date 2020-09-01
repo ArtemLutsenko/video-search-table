@@ -185,6 +185,9 @@
                 li:last-child {
                     padding-bottom: 0;
                 }
+                li:first-child {
+                    margin-top: 12px;
+                }
             }
 
             input[type="checkbox"] {

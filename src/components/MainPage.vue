@@ -25,15 +25,18 @@
                         @toggleVideoView="toggleVideoView"
                         @changeSearchingWord = "changeSearchingWord"
                 ></app-main-content-top>
-                <div class="main-content__list" :class="videoViewType === 'tile' ? 'tile' : 'list' ">
-                    <app-video-item  v-for="item  in sortedData"
-                                     :key="item.id"
-                                     :title="item.title"
-                                     :access="item.access"
-                                     :covers="item.covers.main"
-                                     :link="item.options.link"
-                                     :videoViewType = "videoViewType"
-                    ></app-video-item>
+                <div class="row">
+                    <div class="main-content__list" :class="videoViewType === 'tile' ? 'tile' : 'list' ">
+                        <app-video-item  v-for="item  in sortedData"
+                                         :key="item.id"
+                                         :title="item.title"
+                                         :access="item.access"
+                                         :covers="item.covers.main"
+                                         :link="item.options.link"
+                                         :videoViewType = "videoViewType"
+                                        :class="videoViewType === 'tile' ? 'col-md-4 col-sm-6 ': ''"
+                        ></app-video-item>
+                    </div>
                 </div>
             </div>
         </div>
@@ -253,12 +256,14 @@
     .container{
         display: flex;
         flex: 1 0 auto;
+        min-width: 320px;
     }
     .wrapper {
         width: 1155px;
         display: flex;
         margin: 0 auto;
         box-sizing: border-box;
+
 
         .main-content {
             flex: 1;
@@ -277,7 +282,7 @@
     }
     @media (max-width: 1280px ) {
         .wrapper{
-            width: 90%;
+            width: 100%;
         }
     }
     @media (max-width: 768px ) {

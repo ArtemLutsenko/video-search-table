@@ -41,7 +41,7 @@
             padding: 20px 20px 20px 15px;
         }
         &__title{
-            height: 120px;
+            height: 100px;
             color: #232323;
             font-size: 16px;
             font-weight: 500;
@@ -149,12 +149,29 @@
         }
     }
     @media (max-width: 1280px ) {
+
+        .video-card{
+            .card-btn{
+                font-size: 14px;
+                width: 100%;
+                letter-spacing: .1px;
+            }
+            &__title{
+                font-size: 16px ;
+            }
+        }
+
         .video-card.card-list{
             .video-card__info{
                 .video-card__title{
                     font-size: 20px;
-                    line-height: 24px;
+                //    line-height: 24px;
                 }
+            }
+            .card-btn{
+                letter-spacing: 1px;
+                font-size: 14px;
+                color:green;
             }
             img{
                 width: 20%;
@@ -164,11 +181,24 @@
 
     }
     @media (max-width: 1024px ) {
+        .video-card{
+            .card-btn{
+                font-size: 12px;
+                width: 100%;
+                letter-spacing: .1px;
+            }
+            &__title{
+                font-size: 16px ;
+            }
+        }
+
+
         .video-card.card-list{
             .video-card__info{
                 .video-card__title{
-                    font-size: 20px;
+                    font-size: 16px;
                     line-height: 24px;
+                    color: red;
                 }
             }
             img{
@@ -176,45 +206,33 @@
             }
 
             .card-btn{
-                width: 50%;
-                font-size: 16px;
-            }
-        }
-
-
-        .video-card{
-            width: 46%;
-        }
-        .video-card.card-list{
-            .video-card__info{
-                .video-card__title{
-                    font-size: 16px;
-                    line-height: 24px;
-                }
+                font-size: 14px;
+                letter-spacing: 1.4px;
+                color: red;
             }
         }
     }
 
 
-    @media (max-width: 768px ) {
+    @media (max-width: 769px ) {
         .video-card{
             width: 100%;
 
             .card-btn{
-                width: 70%;
-                height: 44px;
+                width: 100%;
+                height: 34px;
                 font-size: 14px;
                 font-weight: 700;
                 line-height: 30px;
             }
             .video-card__btn-watch:after{
-                width: 44px;
-                height: 44px;
+                width: 34px;
+                height: 34px;
             }
 
             .video-card__btn-buy:after{
-                width: 44px;
-                height: 44px;
+                width: 34px;
+                height: 34px;
             }
         }
         .video-card.card-list{
@@ -236,14 +254,7 @@
     }
 
     @media (max-width: 480px ) {
-        .video-card.card-list{
-            .video-card__info{
-                .video-card__title{
-                    font-size: 16px;
-                    line-height: 20px;
-                }
-            }
-        }
+
         .video-card.card-list {
             .card-btn {
                 width: 70%;
@@ -264,7 +275,22 @@
                 width: 24px;
                 height: 24px;
             }
+            .video-card__info{
+                .video-card__title{
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+            }
+            img{
+                width: 40%;
+            }
+
+            .card-btn{
+                width: 90%;
+                font-size: 10px;
+            }
         }
+
         .video-card{
             .card-btn{
                 width: 70%;
@@ -281,16 +307,6 @@
             .video-card__btn-buy:after{
                 width: 24px;
                 height: 24px;
-            }
-        }
-        .video-card.card-list{
-            img{
-                width: 40%;
-            }
-
-            .card-btn{
-                width: 90%;
-                font-size: 10px;
             }
         }
 
